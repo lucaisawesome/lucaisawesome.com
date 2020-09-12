@@ -1,0 +1,114 @@
+<style>
+  span {
+    background-color: blueviolet;
+    color: white;
+    font-size: 20px;
+  }
+
+  b {
+    font-weight: 100;
+    color: red;
+  }
+
+  glooper {
+    border-bottom: 5px solid green;
+  }
+
+  glooper {
+    border-top: 7px dotted blue;
+  }
+
+  .body {
+    position: relative;
+  }
+
+  .face {
+    width: 200px;
+    height: 200px;
+    background-color: tan;
+    border-bottom-right-radius: 63px;
+    border-bottom-left-radius: 63px;
+  }
+
+  .hair {
+    background-color: brown;
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+  }
+
+  .left-eye {
+    height: 30px;
+    width: 30px;
+    display: block;
+    background: white;
+    position: absolute;
+    top: 60px;
+    left: 30px;
+    border-radius: 20px;
+  }
+
+  .right-eye {
+    height: 30px;
+    width: 30px;
+    display: block;
+    background: white;
+    position: absolute;
+    top: 60px;
+    left: 130px;
+    border-radius: 20px;
+  }
+
+  .left-pupil,
+  .right-pupil {
+    height: 10px;
+    width: 10px;
+    display: block;
+    background: black;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 20px;
+  }
+
+  .nose {
+    display: block;
+    position: absolute;
+    top: 95px;
+    left: 85px;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+</style>
+
+<div>
+  <h1>
+    Hi
+    <b>Luca!</b>
+  </h1>
+  <glooper>
+    hello there!
+  </glooper>
+  <p>
+    another piece of
+    <span>text here</span>
+  </p>
+</div>
+
+<div class="body">
+  <div class="hair"></div>
+  <div class="face">
+    <span class="left-eye">
+      <span class="left-pupil"> </span>
+    </span>
+    <span class="right-eye">
+      <span class="right-pupil"></span>
+    </span>
+    <span class="nose"></span>
+    <span class="mouth"></span>
+  </div>
+</div>
