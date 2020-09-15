@@ -1,0 +1,23 @@
+:root {
+  --head-width: 200px;
+  --head-height: var(--head-width);
+  --color-skin: tan;
+  --color-hair: brown;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.scene {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.head {
+  width: var(--head-width);
+  height: var(--head-height);
+  background-color: var(--color-skin);
+}
