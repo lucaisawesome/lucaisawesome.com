@@ -1,8 +1,36 @@
 :root {
-  --head-width: 200px;
-  --head-height: var(--head-width);
-  --color-skin: tan;
-  --color-hair: brown;
+  --color-1: #18206f;
+  --color-2: #88b2b8;
+  --color-3: #ff8c40;
+  --color-4: #852500;
+  --color-5: #8f5b34;
+  --color-6: #c3b091;
+  --color-7: #00bfc2;
+  --color-8: #31d3b3;
+  --color-9: #bd1e1e;
+  --color-10: #17255a;
+  --color-11: #d1bea8;
+
+  --color-skin: var(--color-11);
+  --color-skin-dark: var(--color-6);
+
+  --neck-width: 30vw;
+  --neck-height: 5vw;
+
+  --face-width: 40vw;
+  --face-height: 35vw;
+  --face-top-curve: 5vw;
+  --face-bottom-curve: 10vw;
+  --face-shift-down: 2vw;
+
+  --hair-width: var(--face-width);
+  --hair-height: 10vw;
+
+  --chest-height: 10vw;
+
+  --shoulder-height: 20vw;
+  --shoulder-curve: var(--shoulder-height);
+  --shirt-color: var(--color-10);
 }
 
 html,
@@ -11,13 +39,84 @@ body {
 }
 
 .scene {
+  position: relative;
+  overflow: hidden auto;
+}
+
+.bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.2;
+  background: linear-gradient(135deg, var(--color-3) 25%, transparent 25%) -50px
+      0,
+    linear-gradient(225deg, var(--color-3) 25%, transparent 25%) -50px 0,
+    linear-gradient(315deg, var(--color-3) 25%, transparent 25%),
+    linear-gradient(45deg, var(--color-3) 25%, transparent 25%);
+  background-size: 100px 100px;
+  background-color: var(--color-9);
+}
+
+.fg {
+  position: relative;
+  z-index: 1;
+  height: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: end;
   align-items: center;
 }
 
 .head {
-  width: var(--head-width);
-  height: var(--head-height);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+}
+
+.neck {
+  height: var(--neck-height);
+  width: var(--neck-width);
+  background-color: var(--color-skin-dark);
+  position: relative;
+  z-index: 0;
+}
+
+.face {
+  height: var(--face-height);
+  width: var(--face-width);
+  border-top-right-radius: var(--face-top-curve);
+  border-top-left-radius: var(--face-top-curve);
+  border-bottom-right-radius: var(--face-bottom-curve);
+  border-bottom-left-radius: var(--face-bottom-curve);
   background-color: var(--color-skin);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin-bottom: calc(var(--face-shift-down) * -1);
+  position: relative;
+  z-index: 1;
+}
+
+.hair {
+  width: var(--hair-width);
+  height: var(--hair-height);
+  background-color: var(--color-5);
+  margin-bottom: calc(var(--face-top-curve) * -1);
+  border-top-right-radius: 70%;
+  border-top-left-radius: 10%;
+  position: relative;
+  z-index: 2;
+}
+
+.chest {
+  height: var(--chest-height);
+  overflow: hidden;
+}
+
+.shoulders {
+  width: 90vw;
+  height: var(--shoulder-height);
+  background-color: var(--shirt-color);
+  border-top-right-radius: var(--shoulder-curve);
+  border-top-left-radius: var(--shoulder-curve);
 }
